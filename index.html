@@ -601,6 +601,24 @@ body.lock{overflow:hidden}
 @media (max-width:370px){.hero.poster h2{font-size:36px}.hero.poster .in{max-width:72%}.nav .cbtn{flex-basis:64px}.cbtn .cav{width:52px;height:52px}}
 @media (prefers-reduced-motion:reduce){.srise path{stroke-dashoffset:0}.sword{opacity:1}.cbtn.live .cav{animation:none}}
 
+/* ---------- Zone 2 (19 Nov) ---------- */
+.z2c{position:relative;border-color:color-mix(in srgb,var(--ec) 30%,var(--ln))}
+.z2c::before{content:'';position:absolute;left:0;top:18px;width:3px;height:26px;border-radius:0 3px 3px 0;background:var(--ec)}
+.z2c h3{margin-bottom:9px}
+.z2c h3 small{font:500 12.5px var(--b);color:var(--warn)}
+.z2c .tags{margin-top:0}
+.z2w{font:500 13px var(--b);color:var(--mut);white-space:nowrap}
+.z2w b{font:700 15px var(--h);color:var(--c1)}
+.z2wn{margin-top:10px;padding:10px 12px;border-radius:13px;background:rgba(255,181,71,.07);border:1px solid rgba(255,181,71,.3);font-size:13.5px;color:#f6dcb2;line-height:1.5}
+.z2m{margin-top:12px}
+.z2g{margin-top:12px}
+.z2g .numin{width:100%}
+.z2o{margin-top:10px;font-size:13.5px;line-height:1.65;color:var(--mut)}
+.z2o:empty{display:none}
+.z2o b{font:600 16px var(--h);color:var(--ink)}
+.z2o .bad{color:var(--bad)}.z2o .okc{color:var(--ok)}.z2o .mu{color:var(--mut)}
+.z2bar{margin-top:12px;height:8px}
+
 </style>
 </head>
 <body>
@@ -675,7 +693,7 @@ const uid=p=>p+'_'+Date.now().toString(36)+Math.random().toString(36).slice(2,5)
 const esc=s=>(s||'').replace(/[<>"]/g,c=>({'<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let DID={},RDY={},PROGV=0,FRESH=0;const V_LATEST=5;const SPLASH_T0=Date.now();
 /* ========= seed: program v5 (built from the real log, 18 Sep – 9 Oct) ========= */
-const PROG5=[{"id":"d1","name":"Push A","emoji":"💪","color":"#ff2d55","ex":[{"id":"x1","name":"Bench Press","sets":4,"reps":"6–10","rir":"1–2","comp":1,"unit":"kg","w":50,"note":"","mus":["chest","triceps","delts"],"alts":[{"name":"Machine Chest Press","note":"","unit":"kg","w":40},{"name":"Push-ups","note":"","unit":"bw"}]},{"id":"x2","name":"Incline DB Press","sets":3,"reps":"8–12","rir":"1–2","comp":1,"unit":"kg","w":17.5,"note":"อกส่วนบน","mus":["chest","delts"],"alts":[{"name":"Incline Machine","note":"จับกว้าง","unit":"kg"}]},{"id":"x3","name":"DB Overhead Press","sets":3,"reps":"8–12","rir":"1–2","comp":1,"unit":"kg","w":10,"note":"","mus":["delts","triceps"],"alts":[{"name":"Barbell OHP","note":"","unit":"kg","w":25},{"name":"Machine Shoulder Press","note":"","unit":"pin"}]},{"id":"x4","name":"Lateral Raise","sets":4,"reps":"12–20","rir":"0–1","comp":0,"unit":"kg","w":7.5,"note":"ไหล่ข้าง ยกถึงระดับไหล่","mus":["delts"],"alts":[{"name":"Cable Lateral Raise","note":"","unit":"pin","w":3}]},{"id":"x5","name":"Triceps Pushdown","sets":2,"reps":"10–15","rir":"1–2","comp":0,"unit":"pin","w":5,"note":"","mus":["triceps"],"alts":[{"name":"Overhead Triceps Ext","note":"","unit":"kg","w":10},{"name":"Bench Dips","note":"","unit":"bw"}]}]},{"id":"d2","name":"Pull A","emoji":"🔙","color":"#ff4fa3","ex":[{"id":"x6","name":"Pull-ups","sets":4,"reps":"AMRAP","rir":"0–1","comp":1,"unit":"bw","w":"","note":"พักเซ็ตละ 2–3 นาที เป้าคือรวมครั้งเพิ่มทีละ 1–2","mus":["back","biceps"],"alts":[{"name":"Lat Pulldown","note":"","unit":"pin","w":6},{"name":"Assisted Pull-ups","note":"ยางช่วย","unit":"bw"}]},{"id":"x7","name":"Barbell Row","sets":3,"reps":"6–10","rir":"1–2","comp":1,"unit":"kg","w":36.5,"note":"","mus":["back","biceps"],"alts":[{"name":"Cable Row","note":"","unit":"pin","w":10},{"name":"DB Row","note":"ทีละข้าง","unit":"kg","w":17.5}]},{"id":"x8","name":"Barbell Curl","sets":3,"reps":"8–12","rir":"0–1","comp":0,"unit":"kg","w":16.5,"note":"","mus":["biceps"],"alts":[{"name":"Cable Curl","note":"","unit":"pin","w":6},{"name":"DB Curl","note":"","unit":"kg","w":7.5}]},{"id":"xr1","name":"Rear Delt Fly","sets":3,"reps":"12–20","rir":"0–1","comp":0,"unit":"kg","w":5,"note":"ไหล่หลังครั้งที่ 1 ของสัปดาห์ ก้มตัว ยกออกข้าง ไม่ใช้แรงเหวี่ยง","mus":["rdelt"],"alts":[{"name":"Face Pull","note":"","unit":"pin","w":4},{"name":"Reverse Pec Deck","note":"","unit":"pin","w":4}]},{"id":"xc1","name":"Hanging Leg Raise","sets":2,"reps":"10–15","rir":"1–2","comp":0,"unit":"bw","w":"","note":"ท้องครั้งที่ 1 ห้ามเหวี่ยงตัว ม้วนสะโพกขึ้นด้วยท้อง","mus":["core"],"alts":[{"name":"Lying Leg Raise","note":"","unit":"bw"},{"name":"Captain's Chair Raise","note":"","unit":"bw"}]}]},{"id":"d3","name":"Legs A","emoji":"🦵","color":"#ff8a2a","ex":[{"id":"x10","name":"Barbell Squat","sets":4,"reps":"6–10","rir":"1–2","comp":1,"unit":"kg","w":62.5,"note":"","mus":["quads","glutes"],"alts":[{"name":"Leg Press","note":"","unit":"kg"},{"name":"Hack Squat","note":"","unit":"kg"},{"name":"Dumbbell Goblet Squat","note":"","unit":"kg","w":25}]},{"id":"x11","name":"Romanian Deadlift","sets":3,"reps":"8–12","rir":"1–2","comp":1,"unit":"kg","w":65,"note":"ต้นขาหลังและก้น หลังตรงตลอด","mus":["hams","glutes"],"alts":[{"name":"DB RDL","note":"","unit":"kg","w":25}]},{"id":"x12","name":"Leg Extension","sets":3,"reps":"12–20","rir":"1–2","comp":0,"unit":"kg","w":40,"note":"","mus":["quads"],"alts":[{"name":"Walking Lunges","note":"ดัมเบล","unit":"kg","w":10}]},{"id":"xh1","name":"Seated Leg Curl","sets":3,"reps":"10–15","rir":"0–1","comp":0,"unit":"pin","w":5,"note":"นั่งงอเข่า ต้นขาหลังถูกยืดมากกว่าท่านอน ถ้าไม่มีเครื่องใช้ท่าทางเลือก","mus":["hams"],"alts":[{"name":"DB Leg Curl","note":"นอนคว่ำบนม้านั่ง หนีบดัมเบล","unit":"kg","w":7.5},{"name":"Slider Leg Curl","note":"ผ้าหรือแผ่นสไลด์ใต้ส้นเท้า","unit":"bw"},{"name":"Nordic Curl","note":"ยากมาก ใช้มือช่วยดัน","unit":"bw"}]},{"id":"x13","name":"Standing Calf Raise","sets":3,"reps":"12–20","rir":"0–1","comp":0,"unit":"kg","w":45,"note":"ค้างล่างสุด 1 วินาที","mus":["calves"],"alts":[{"name":"Seated Calf Raise","note":"","unit":"pin","w":10}]}]},{"id":"d4","name":"Recovery","emoji":"🚶","color":"#e9a48e","ex":[{"id":"xw1","name":"เดินเบา Zone 2","sets":1,"reps":"30–40 นาที","rir":"–","comp":0,"unit":"bw","w":"","note":"เดินเร็วพอหายใจแรงขึ้นแต่ยังพูดคุยได้ ชีพจรไม่เกินราว 130 ใส่จำนวนนาทีในช่อง \"ครั้ง\"","mus":[],"alts":[{"name":"ปั่นจักรยานเบา","note":"","unit":"bw"}]},{"id":"xc7","name":"Crunch","sets":2,"reps":"15–25","rir":"1–2","comp":0,"unit":"bw","w":"","note":"ท้องบน ม้วนไหล่ขึ้นจากพื้น ค้างบน 1 วินาที ไม่ดึงคอ","mus":["core"],"alts":[{"name":"Crunch with Pause","note":"ค้างบน 2 วินาที ยากขึ้น","unit":"bw"},{"name":"V-up","note":"ยากที่สุด","unit":"bw"}]},{"id":"xc4","name":"Oblique Knee Raise","sets":2,"reps":"10–12/ข้าง","rir":"1–2","comp":0,"unit":"bw","w":"","note":"ท้องข้าง ห้อยหรือพิงเครื่อง leg raise ยกเข่าบิดไปทีละข้าง","mus":["core"],"alts":[{"name":"Bicycle Crunch","note":"ท้องข้าง ช้า ๆ","unit":"bw"},{"name":"Side Plank","note":"บันทึกเป็นวินาที ต่อข้าง","unit":"bw"}]},{"id":"xn3","name":"Single-leg Calf Raise","sets":2,"reps":"15–25/ข้าง","rir":"1–2","comp":0,"unit":"bw","w":"","note":"น่องที่ยังน้อย ยืนบนขั้นบันได ลงให้สุด ค้างบน 1 วินาที","mus":["calves"],"alts":[{"name":"Calf Raise สองขา","note":"","unit":"bw"}]}]},{"id":"d5","name":"Push B","emoji":"🔥","color":"#ff5a3c","ex":[{"id":"x20","name":"DB Bench Press","sets":3,"reps":"10–15","rir":"1–2","comp":1,"unit":"kg","w":20,"note":"","mus":["chest","triceps"],"alts":[{"name":"Machine Chest Press","note":"","unit":"kg","w":40}]},{"id":"x21","name":"Chest Fly","sets":3,"reps":"12–20","rir":"0–1","comp":0,"unit":"pin","w":5,"note":"ลงให้อกยืดสุด ค้าง 1 วินาที","mus":["chest"],"alts":[{"name":"DB Fly","note":"","unit":"kg","w":12.5},{"name":"Dips","note":"","unit":"bw"}]},{"id":"x22","name":"Lateral Raise","sets":3,"reps":"12–20","rir":"0–1","comp":0,"unit":"kg","w":7.5,"note":"","mus":["delts"],"alts":[{"name":"Cable Lateral Raise","note":"","unit":"pin","w":3}]},{"id":"x23","name":"Overhead Triceps Ext","sets":3,"reps":"10–15","rir":"1–2","comp":0,"unit":"kg","w":10,"note":"ยกแขนเหนือหัว หัวไตรเซ็ปยาวถูกยืดสุด งานวิจัยพบโตกว่า pushdown ราว 1.4 เท่า","mus":["triceps"],"alts":[{"name":"Triceps Pushdown","note":"","unit":"kg","w":10}]},{"id":"xn1","name":"Seated Calf Raise","sets":3,"reps":"15–20","rir":"0–1","comp":0,"unit":"pin","w":10,"note":"น่องครั้งที่สองของสัปดาห์","mus":["calves"],"alts":[{"name":"Single-leg Calf Raise","note":"ถือดัมเบล","unit":"kg","w":15}]}]},{"id":"d6","name":"Pull B","emoji":"🎯","color":"#c45bff","ex":[{"id":"x24","name":"Lat Pulldown","sets":4,"reps":"8–12","rir":"1–2","comp":1,"unit":"pin","w":6,"note":"","mus":["back","biceps"],"alts":[{"name":"Pull-ups","note":"","unit":"bw"}]},{"id":"x25","name":"Cable Pullover","sets":2,"reps":"12–15","rir":"0–1","comp":0,"unit":"pin","w":5,"note":"","mus":["back"],"alts":[{"name":"DB Pullover","note":"","unit":"kg","w":15}]},{"id":"x26","name":"Face Pull","sets":3,"reps":"15–20","rir":"0–1","comp":0,"unit":"pin","w":4,"note":"ไหล่หลัง ดึงเข้าหน้าผาก ศอกสูง","mus":["rdelt"],"alts":[{"name":"Rear Delt Fly","note":"","unit":"kg","w":5}]},{"id":"x27","name":"DB Curl","sets":3,"reps":"10–15","rir":"0–1","comp":0,"unit":"kg","w":7.5,"note":"นั่งเอนบนม้านั่ง incline ให้แขนเหยียดสุดด้านล่าง","mus":["biceps"],"alts":[{"name":"Cable Curl","note":"","unit":"pin","w":6}]},{"id":"x_mv0nusx3wjx","name":"Hammer curl","sets":2,"reps":"7–9","rir":"1–2","comp":0,"unit":"kg","w":7.5,"note":"","mus":["biceps"],"alts":[{"name":"Cable Hammer Curl","note":"เชือก","unit":"pin","w":5}]}]},{"id":"d7","name":"Legs B","emoji":"🦿","color":"#ffc23d","ex":[{"id":"x28","name":"Barbell Squat","sets":4,"reps":"8–12","rir":"1–2","comp":1,"unit":"kg","w":55,"note":"ต้นขาหน้าครั้งที่ 2 ของสัปดาห์ เบากว่าวันอังคาร เน้นช่วงครั้งสูง","mus":["quads","glutes"],"alts":[{"name":"Goblet Squat","note":"","unit":"kg","w":25},{"name":"Leg Press","note":"","unit":"kg"}]},{"id":"x32","name":"DB Romanian Deadlift","sets":3,"reps":"10–15","rir":"1–2","comp":1,"unit":"kg","w":22.5,"note":"ต้นขาหลังครั้งที่ 2 ดันสะโพกไปหลัง หลังตรง","mus":["hams","glutes"],"alts":[{"name":"Single-leg RDL","note":"","unit":"kg","w":15},{"name":"Barbell RDL","note":"","unit":"kg","w":55}]},{"id":"x30","name":"Hip Thrust","sets":3,"reps":"10–15","rir":"1–2","comp":1,"unit":"kg","w":26.5,"note":"บีบก้นค้างบนสุด 1 วินาที","mus":["glutes","hams"],"alts":[{"name":"Glute Bridge","note":"","unit":"kg","w":20}]},{"id":"x14","name":"Ab Wheel Rollout","sets":2,"reps":"10–15","rir":"1–2","comp":0,"unit":"bw","w":"","note":"หลังห้ามแอ่น ทำได้เกิน 15 แล้ว ลงช้า 3 วินาที หรือกลิ้งออกให้ไกลขึ้น","mus":["core"],"alts":[{"name":"Plank","note":"บันทึกเป็นวินาที","unit":"bw"},{"name":"Leg Raise","note":"นอนพื้น","unit":"bw"}]}]}];
+const PROG5=[{"id":"d1","name":"Push A","emoji":"💪","color":"#ff2d55","ex":[{"id":"x1","name":"Bench Press","sets":4,"reps":"6–10","rir":"1–2","comp":1,"unit":"kg","w":50,"note":"","mus":["chest","triceps","delts"],"alts":[{"name":"Machine Chest Press","note":"","unit":"kg","w":40},{"name":"Push-ups","note":"","unit":"bw"}]},{"id":"x2","name":"Incline DB Press","sets":3,"reps":"8–12","rir":"1–2","comp":1,"unit":"kg","w":17.5,"note":"อกส่วนบน","mus":["chest","delts"],"alts":[{"name":"Incline Machine","note":"จับกว้าง","unit":"kg"}]},{"id":"x3","name":"DB Overhead Press","sets":3,"reps":"8–12","rir":"1–2","comp":1,"unit":"kg","w":10,"note":"","mus":["delts","triceps"],"alts":[{"name":"Barbell OHP","note":"","unit":"kg","w":25},{"name":"Machine Shoulder Press","note":"","unit":"pin"}]},{"id":"x4","name":"Lateral Raise","sets":4,"reps":"12–20","rir":"0–1","comp":0,"unit":"kg","w":7.5,"note":"ไหล่ข้าง ยกถึงระดับไหล่","mus":["delts"],"alts":[{"name":"Cable Lateral Raise","note":"","unit":"pin","w":3}]},{"id":"x5","name":"Triceps Pushdown","sets":2,"reps":"10–15","rir":"1–2","comp":0,"unit":"pin","w":5,"note":"","mus":["triceps"],"alts":[{"name":"Overhead Triceps Ext","note":"","unit":"kg","w":10},{"name":"Bench Dips","note":"","unit":"bw"}]}]},{"id":"d2","name":"Pull A","emoji":"🔙","color":"#ff4fa3","ex":[{"id":"x6","name":"Pull-ups","sets":4,"reps":"AMRAP","rir":"0–1","comp":1,"unit":"bw","w":"","note":"พักเซ็ตละ 2–3 นาที เป้าคือรวมครั้งเพิ่มทีละ 1–2","mus":["back","biceps"],"alts":[{"name":"Lat Pulldown","note":"","unit":"pin","w":6},{"name":"Assisted Pull-ups","note":"ยางช่วย","unit":"bw"}]},{"id":"x7","name":"Barbell Row","sets":3,"reps":"6–10","rir":"1–2","comp":1,"unit":"kg","w":36.5,"note":"","mus":["back","biceps"],"alts":[{"name":"Cable Row","note":"","unit":"pin","w":10},{"name":"DB Row","note":"ทีละข้าง","unit":"kg","w":17.5}]},{"id":"x8","name":"Barbell Curl","sets":3,"reps":"8–12","rir":"0–1","comp":0,"unit":"kg","w":16.5,"note":"","mus":["biceps"],"alts":[{"name":"Cable Curl","note":"","unit":"pin","w":6},{"name":"DB Curl","note":"","unit":"kg","w":7.5}]},{"id":"xr1","name":"Rear Delt Fly","sets":3,"reps":"12–20","rir":"0–1","comp":0,"unit":"kg","w":5,"note":"ไหล่หลังครั้งที่ 1 ของสัปดาห์ ก้มตัว ยกออกข้าง ไม่ใช้แรงเหวี่ยง","mus":["rdelt"],"alts":[{"name":"Face Pull","note":"","unit":"pin","w":4},{"name":"Reverse Pec Deck","note":"","unit":"pin","w":4}]},{"id":"xc1","name":"Hanging Leg Raise","sets":2,"reps":"10–15","rir":"1–2","comp":0,"unit":"bw","w":"","note":"ท้องครั้งที่ 1 ห้ามเหวี่ยงตัว ม้วนสะโพกขึ้นด้วยท้อง","mus":["core"],"alts":[{"name":"Lying Leg Raise","note":"","unit":"bw"},{"name":"Captain's Chair Raise","note":"","unit":"bw"}]}]},{"id":"d3","name":"Legs A","emoji":"🦵","color":"#ff8a2a","ex":[{"id":"x10","name":"Barbell Squat","sets":4,"reps":"6–10","rir":"1–2","comp":1,"unit":"kg","w":62.5,"note":"","mus":["quads","glutes"],"alts":[{"name":"Leg Press","note":"","unit":"kg"},{"name":"Hack Squat","note":"","unit":"kg"},{"name":"Dumbbell Goblet Squat","note":"","unit":"kg","w":25}]},{"id":"x11","name":"Romanian Deadlift","sets":3,"reps":"8–12","rir":"1–2","comp":1,"unit":"kg","w":65,"note":"ต้นขาหลังและก้น หลังตรงตลอด","mus":["hams","glutes"],"alts":[{"name":"DB RDL","note":"","unit":"kg","w":25}]},{"id":"x12","name":"Leg Extension","sets":3,"reps":"12–20","rir":"1–2","comp":0,"unit":"kg","w":40,"note":"","mus":["quads"],"alts":[{"name":"Walking Lunges","note":"ดัมเบล","unit":"kg","w":10}]},{"id":"xh1","name":"Seated Leg Curl","sets":3,"reps":"10–15","rir":"0–1","comp":0,"unit":"pin","w":5,"note":"นั่งงอเข่า ต้นขาหลังถูกยืดมากกว่าท่านอน ถ้าไม่มีเครื่องใช้ท่าทางเลือก","mus":["hams"],"alts":[{"name":"DB Leg Curl","note":"นอนคว่ำบนม้านั่ง หนีบดัมเบล","unit":"kg","w":7.5},{"name":"Slider Leg Curl","note":"ผ้าหรือแผ่นสไลด์ใต้ส้นเท้า","unit":"bw"},{"name":"Nordic Curl","note":"ยากมาก ใช้มือช่วยดัน","unit":"bw"}]},{"id":"x13","name":"Standing Calf Raise","sets":3,"reps":"12–20","rir":"0–1","comp":0,"unit":"kg","w":45,"note":"ค้างล่างสุด 1 วินาที","mus":["calves"],"alts":[{"name":"Seated Calf Raise","note":"","unit":"pin","w":10}]}]},{"id":"d4","name":"Recovery","emoji":"🚶","color":"#e9a48e","ex":[{"id":"xc7","name":"Crunch","sets":2,"reps":"15–25","rir":"1–2","comp":0,"unit":"bw","w":"","note":"ท้องบน ม้วนไหล่ขึ้นจากพื้น ค้างบน 1 วินาที ไม่ดึงคอ","mus":["core"],"alts":[{"name":"Crunch with Pause","note":"ค้างบน 2 วินาที ยากขึ้น","unit":"bw"},{"name":"V-up","note":"ยากที่สุด","unit":"bw"}]},{"id":"xc4","name":"Oblique Knee Raise","sets":2,"reps":"10–12/ข้าง","rir":"1–2","comp":0,"unit":"bw","w":"","note":"ท้องข้าง ห้อยหรือพิงเครื่อง leg raise ยกเข่าบิดไปทีละข้าง","mus":["core"],"alts":[{"name":"Bicycle Crunch","note":"ท้องข้าง ช้า ๆ","unit":"bw"},{"name":"Side Plank","note":"บันทึกเป็นวินาที ต่อข้าง","unit":"bw"}]},{"id":"xn3","name":"Single-leg Calf Raise","sets":2,"reps":"15–25/ข้าง","rir":"1–2","comp":0,"unit":"bw","w":"","note":"น่องที่ยังน้อย ยืนบนขั้นบันได ลงให้สุด ค้างบน 1 วินาที","mus":["calves"],"alts":[{"name":"Calf Raise สองขา","note":"","unit":"bw"}]}]},{"id":"d5","name":"Push B","emoji":"🔥","color":"#ff5a3c","ex":[{"id":"x20","name":"DB Bench Press","sets":3,"reps":"10–15","rir":"1–2","comp":1,"unit":"kg","w":20,"note":"","mus":["chest","triceps"],"alts":[{"name":"Machine Chest Press","note":"","unit":"kg","w":40}]},{"id":"x21","name":"Chest Fly","sets":3,"reps":"12–20","rir":"0–1","comp":0,"unit":"pin","w":5,"note":"ลงให้อกยืดสุด ค้าง 1 วินาที","mus":["chest"],"alts":[{"name":"DB Fly","note":"","unit":"kg","w":12.5},{"name":"Dips","note":"","unit":"bw"}]},{"id":"x22","name":"Lateral Raise","sets":3,"reps":"12–20","rir":"0–1","comp":0,"unit":"kg","w":7.5,"note":"","mus":["delts"],"alts":[{"name":"Cable Lateral Raise","note":"","unit":"pin","w":3}]},{"id":"x23","name":"Overhead Triceps Ext","sets":3,"reps":"10–15","rir":"1–2","comp":0,"unit":"kg","w":10,"note":"ยกแขนเหนือหัว หัวไตรเซ็ปยาวถูกยืดสุด งานวิจัยพบโตกว่า pushdown ราว 1.4 เท่า","mus":["triceps"],"alts":[{"name":"Triceps Pushdown","note":"","unit":"kg","w":10}]},{"id":"xn1","name":"Seated Calf Raise","sets":3,"reps":"15–20","rir":"0–1","comp":0,"unit":"pin","w":10,"note":"น่องครั้งที่สองของสัปดาห์","mus":["calves"],"alts":[{"name":"Single-leg Calf Raise","note":"ถือดัมเบล","unit":"kg","w":15}]}]},{"id":"d6","name":"Pull B","emoji":"🎯","color":"#c45bff","ex":[{"id":"x24","name":"Lat Pulldown","sets":4,"reps":"8–12","rir":"1–2","comp":1,"unit":"pin","w":6,"note":"","mus":["back","biceps"],"alts":[{"name":"Pull-ups","note":"","unit":"bw"}]},{"id":"x25","name":"Cable Pullover","sets":2,"reps":"12–15","rir":"0–1","comp":0,"unit":"pin","w":5,"note":"","mus":["back"],"alts":[{"name":"DB Pullover","note":"","unit":"kg","w":15}]},{"id":"x26","name":"Face Pull","sets":3,"reps":"15–20","rir":"0–1","comp":0,"unit":"pin","w":4,"note":"ไหล่หลัง ดึงเข้าหน้าผาก ศอกสูง","mus":["rdelt"],"alts":[{"name":"Rear Delt Fly","note":"","unit":"kg","w":5}]},{"id":"x27","name":"DB Curl","sets":3,"reps":"10–15","rir":"0–1","comp":0,"unit":"kg","w":7.5,"note":"นั่งเอนบนม้านั่ง incline ให้แขนเหยียดสุดด้านล่าง","mus":["biceps"],"alts":[{"name":"Cable Curl","note":"","unit":"pin","w":6}]},{"id":"x_mv0nusx3wjx","name":"Hammer curl","sets":2,"reps":"7–9","rir":"1–2","comp":0,"unit":"kg","w":7.5,"note":"","mus":["biceps"],"alts":[{"name":"Cable Hammer Curl","note":"เชือก","unit":"pin","w":5}]}]},{"id":"d7","name":"Legs B","emoji":"🦿","color":"#ffc23d","ex":[{"id":"x28","name":"Barbell Squat","sets":4,"reps":"8–12","rir":"1–2","comp":1,"unit":"kg","w":55,"note":"ต้นขาหน้าครั้งที่ 2 ของสัปดาห์ เบากว่าวันอังคาร เน้นช่วงครั้งสูง","mus":["quads","glutes"],"alts":[{"name":"Goblet Squat","note":"","unit":"kg","w":25},{"name":"Leg Press","note":"","unit":"kg"}]},{"id":"x32","name":"DB Romanian Deadlift","sets":3,"reps":"10–15","rir":"1–2","comp":1,"unit":"kg","w":22.5,"note":"ต้นขาหลังครั้งที่ 2 ดันสะโพกไปหลัง หลังตรง","mus":["hams","glutes"],"alts":[{"name":"Single-leg RDL","note":"","unit":"kg","w":15},{"name":"Barbell RDL","note":"","unit":"kg","w":55}]},{"id":"x30","name":"Hip Thrust","sets":3,"reps":"10–15","rir":"1–2","comp":1,"unit":"kg","w":26.5,"note":"บีบก้นค้างบนสุด 1 วินาที","mus":["glutes","hams"],"alts":[{"name":"Glute Bridge","note":"","unit":"kg","w":20}]},{"id":"x14","name":"Ab Wheel Rollout","sets":2,"reps":"10–15","rir":"1–2","comp":0,"unit":"bw","w":"","note":"หลังห้ามแอ่น ทำได้เกิน 15 แล้ว ลงช้า 3 วินาที หรือกลิ้งออกให้ไกลขึ้น","mus":["core"],"alts":[{"name":"Plank","note":"บันทึกเป็นวินาที","unit":"bw"},{"name":"Leg Raise","note":"นอนพื้น","unit":"bw"}]}]}];
 function seedDays(){return JSON.parse(JSON.stringify(PROG5))}
 function seedCfg(){return{mode:'week',weekMap:{0:'d1',1:'d2',2:'d3',3:'d4',4:'d5',5:'d6',6:'d7'},
  cycle:['d1','d2','d3','d4','d5','d6','d7'],anchor:today(),
@@ -684,7 +702,7 @@ const V5_NOTES=[
  ['📈','เน้นกล้ามโตตามงานวิจัย','ราว 92 เซ็ตต่อสัปดาห์ ทุกมัดได้ 10–14 เซ็ต ฝึก 2 ครั้ง และไม่เกิน 8 เซ็ตต่อมัดต่อวัน'],
  ['🦵','ขาครบทั้งหน้าและหลัง','อังคาร Squat, RDL, Leg extension, Seated leg curl ส่วนเสาร์ Squat, DB RDL, Hip thrust'],
  ['💪','เลือกท่าที่กล้ามถูกยืด','Overhead triceps, Seated leg curl, Incline curl และ Chest fly ลงลึก'],
- ['🚶','พุธเป็นวันฟื้นตัว','เดินเบา 30–40 นาที กับท้องและน่องเล็กน้อย ท้องได้ 3 วัน (จ, พ, ส)'],
+ ['🏃','พุธวันฟื้นตัว + Zone 2','วิ่งช้า Zone 2 ค่อย ๆ เพิ่มเวลา กับท้องและน่องเล็กน้อย ท้องได้ 3 วัน (จ, พ, ส)'],
  ['🎯','ไหล่หลัง 2 ครั้งต่อสัปดาห์','Rear delt fly วันจันทร์ และ Face pull วันศุกร์'],
  ['🔩','ท่าเคเบิลนับเป็น "รู"','ตั้งเลขรูจากโน้ตของคุณ แล้วระบบแนะนำน้ำหนักครั้งต่อไปให้ทุกท่า']];
 /* one-time patch for apps already on v5: 2x/week per muscle (Mon, Wed, Sat rebuilt from seed, custom exercises kept) */
@@ -724,11 +742,16 @@ async function patchV7(){if(PROGV<5||(await G('p61')))return;
    if(['x23','x27','x21'].includes(e.id)&&s.note)e.note=s.note}}
  await S('var:x23',{i:0});await S('days',DAYS);await S('p61',1);
  setTimeout(()=>toast('โปรแกรมใหม่: เน้นกล้ามโต ราว 92 เซ็ตต่อสัปดาห์','p'),2000)}
+/* 19 Nov: Zone 2 aerobic base; Wednesday walk becomes the Z2 card, plan starts the Sunday after the illness ramp */
+async function patchZ2(){if(PROGV<5||(await G('p62')))return;
+ const d=DAYS.find(x=>x.id==='d4');if(d){const i=d.ex.findIndex(e=>e.id==='xw1');if(i>=0)d.ex.splice(i,1)}
+ CFG.z2=Object.assign(z2Def(),CFG.z2||{});await S('cfg',CFG);await S('days',DAYS);await S('p62',1);
+ setTimeout(()=>toast('เพิ่มแผน Zone 2 เริ่ม '+thaiDate(CFG.z2.start),'p'),2400)}
 /* 26 Nov (v8): day colours follow the new crimson logo; only seed colours the user never changed */
 const COL8={d1:['#ff4f81','#ff2d55'],d2:['#10afff','#ff4fa3'],d3:['#8f6bff','#ff8a2a'],d4:['#22d8ff','#e9a48e'],d5:['#ff8a3d','#ff5a3c'],d6:['#19d3b0','#c45bff'],d7:['#ffb547','#ffc23d']};
-async function patchColors(){if(await G('p62'))return;let ch=0;
+async function patchColors(){if(await G('p63'))return;let ch=0;
  for(const d of DAYS){const m=COL8[d.id];if(m&&String(d.color||'').toLowerCase()===m[0]){d.color=m[1];ch=1}}
- if(ch)await S('days',DAYS);await S('p62',1)}
+ if(ch)await S('days',DAYS);await S('p63',1)}
 function isDl(ds){ds=ds||curDate;return !!(CFG&&CFG.dlUntil&&ds>=(CFG.dlFrom||'')&&ds<=CFG.dlUntil)}
 /* readiness check-in -> autoregulated volume (neck check, sleep, energy, soreness, return-from-illness ramp) */
 const RQ=[
@@ -965,15 +988,123 @@ function streakCount(){let s=0,ds=today();if(!DID[ds])ds=addD(ds,-1);
 function drawStreak(){const s=streakCount(),el=document.getElementById('streak');
  el.textContent='🔥 '+s;el.setAttribute('aria-label','ฝึกต่อเนื่อง '+s+' วัน');el.classList.toggle('hot',s>=3)}
 
+/* ========= Zone 2 aerobic base (19 Nov) =========
+ plan: weeks 1–2 Wed 25–30 + Thu 20, weeks 3–4 Wed 35–40 + Thu 25–30, week 5+ add Sun 20–30
+ tied to day ids (d4 Recovery = main, d5 Push B / d1 Push A = after lifting) so swaps follow the session */
+const Z2P=[{w:'1–2',tot:50,tl:'50',t:{d4:[25,30],d5:[20,20]}},
+ {w:'3–4',tot:65,tl:'65',t:{d4:[35,40],d5:[25,30]}},
+ {w:'5+',tot:90,tl:'90–100',t:{d4:[40,45],d5:[30,30],d1:[20,30]}}];
+const Z2M={run:'🏃 วิ่ง',bike:'🚴 ปั่น',walk:'🚶 เดิน'};
+/* first week whose Wednesday falls after the illness ramp (sick day + 8) and after today */
+function z2Start(){const li=lastIll(today());let b=addD(today(),1);if(li&&addD(li,8)>b)b=addD(li,8);
+ let s=weekOf(b)[0];if(addD(s,3)<b)s=addD(s,7);return s}
+function z2Def(){return{on:true,start:z2Start(),lo:140,hi:150}}
+function z2C(){return(CFG&&CFG.z2)||{on:false}}
+function z2Wk(ds){const z=z2C();if(!z.on||!z.start)return 0;return Math.floor((dnum(weekOf(ds)[0])-dnum(weekOf(z.start)[0]))/7)+1}
+function z2Ph(ds){const w=z2Wk(ds);return w<1?null:Z2P[w<=2?0:(w<=4?1:2)]}
+function z2Tgt(ds){const z=z2C(),d=dayOf(ds);if(!z.on||!d)return null;const ph=z2Ph(ds);
+ if(!ph)return d.id==='d4'?{lo:30,hi:40,mode:'walk',role:'main',pre:1}:null;
+ const r=ph.t[d.id];if(!r)return null;
+ return{lo:r[0],hi:r[1],mode:'run',role:d.id==='d4'?'main':'after',opt:d.id==='d1'}}
+function z2Rng(t){return t.lo===t.hi?String(t.lo):t.lo+'–'+t.hi}
+function pace(s){s=Math.round(s);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function z2Calc(r){const m=num(r.min),k=num(r.km);if(!(m>0&&k>0))return null;
+ return r.mode==='bike'?{v:Math.round(k/(m/60)*10)/10+' กม./ชม.'}:{ps:m*60/k,v:pace(m*60/k)+' /กม.'}}
+function z2Sum(x){const c=z2Calc(x);return[(Z2M[x.mode]||Z2M.run)+' '+num(x.min)+' นาที',num(x.km)?num(x.km)+' กม.':'',c?c.v:'',num(x.hr)?'HR '+num(x.hr):'',num(x.cad)&&x.mode==='run'?num(x.cad)+' spm':''].filter(Boolean).join(', ')}
+async function z2All(){const o=[];for(const k of await L('z2:')){const v=await G(k);if(v&&num(v.min)>0)o.push(Object.assign({},v,{date:k.slice(3)}))}
+ o.sort((a,b)=>a.date<b.date?-1:1);return o}
+function z2Min(all,dates){const s=new Set(dates);return Math.round(all.filter(x=>s.has(x.date)).reduce((a,x)=>a+num(x.min),0))}
+function z2Verdict(r,z){const o=[],hr=num(r.hr),cad=num(r.cad),c=z2Calc(r);
+ if(c)o.push((r.mode==='bike'?'ความเร็ว ':'เพซ ')+'<b>'+c.v+'</b>');
+ if(hr>0){if(hr>z.hi+3)o.push('<span class="bad">HR เกินโซน '+(hr-z.hi)+' ครั้ง/นาที ครั้งหน้าช้าลงหรือสลับเดิน</span>');
+  else if(hr<z.lo-5)o.push('<span class="mu">'+(r.mode==='walk'?'HR ต่ำกว่าโซน เหมาะกับวันฟื้นตัว':'HR ต่ำกว่าโซน เร่งขึ้นได้นิดหน่อย')+'</span>');
+  else o.push('<span class="okc">✓ อยู่ใน Zone 2</span>')}
+ if(r.mode==='run'&&cad>0&&cad<160)o.push('<span class="mu">cadence ต่ำ ลองก้าวสั้นลง เป้าราว 170</span>');
+ return o.join('<br>')}
+/* slot on the train screen: full card when scheduled or already logged, otherwise a small add button */
+async function z2Slot(a){const box=document.createElement('div');a.appendChild(box);
+ const t=z2Tgt(curDate),sv=await G('z2:'+curDate);
+ if(t||(sv&&num(sv.min)>0)){await z2Card(box,t);return}
+ const b=document.createElement('button');b.className='dash';b.textContent='＋ บันทึกคาร์ดิโอ Zone 2';box.appendChild(b);
+ b.onclick=async()=>{box.innerHTML='';await z2Card(box,null);buzz()}}
+async function z2Card(box,t){
+ const z=z2C(),lo=num(z.lo)||140,hi=num(z.hi)||150,zz={lo,hi},LI=loadInfo(),sv=await G('z2:'+curDate);
+ const all=await z2All(),prevs=all.filter(x=>x.date<curDate),last=prevs.filter(x=>x.mode!=='walk').pop()||prevs[prevs.length-1]||null;
+ const r=Object.assign({mode:t?t.mode:'run',min:'',km:'',hr:'',cad:''},sv||{});
+ const wk=weekOf(curDate),ph=z2Ph(curDate),base=z2Min(all.filter(x=>x.date!==curDate),wk);
+ let note,warn='';
+ if(t&&t.pre)note='แผนวิ่ง Zone 2 เริ่ม'+thaiDate(z.start,1)+' ระหว่างนี้เดินเร็วพอหายใจแรงขึ้นแต่ยังคุยได้';
+ else if(t&&t.role==='main')note='วิ่งช้าพอพูดเป็นประโยคได้ HR เกินโซนให้สลับเดิน ไม่ต้องรักษาเพซ ก้าวสั้น cadence ราว 170';
+ else if(t)note='ยกเวทให้เสร็จก่อนแล้วค่อยวิ่ง หรือแยกไปช่วงเย็นห่าง 6 ชม.ขึ้นไป'+(t.opt?' วันนี้เป็นรอบเสริม ทำเมื่อฟื้นตัวดี':'');
+ else note='คาร์ดิโอนอกตาราง เลี่ยงวันก่อนวันขา (จันทร์, ศุกร์) เพื่อให้ Squat และ RDL ยังเต็มที่';
+ if(t&&!t.pre&&LI.f<1)warn=LI.f<=.5?LI.why+' ตัดวิ่งก่อนตัดเวท วันนี้เดินเบาแทนหรือข้ามได้':'ยังไม่สดเต็มที่ วิ่งราว '+Math.round(t.lo*LI.f)+'–'+Math.round(t.hi*LI.f)+' นาทีพอ ตัดวิ่งก่อนตัดเวท';
+ const c=document.createElement('div');c.className='sect z2c';c.style.setProperty('--ec','#e9a48e');
+ c.innerHTML='<h3><span>🏃 Zone 2'+(t&&t.pre?' <small>ก่อนเริ่มแผน</small>':'')+'</span><span class="z2w">'+(ph?'สัปดาห์ '+z2Wk(curDate)+' ':'สัปดาห์นี้ ')+'<b class="z2wm">'+(base+num(r.min))+'</b>'+(ph?'/'+ph.tl:'')+' นาที</span></h3>'+
+  '<div class="tags">'+(t?'<span class="tg a">'+z2Rng(t)+' นาที</span>':'')+'<span class="tg">HR '+lo+'–'+hi+'</span>'+(t&&t.role==='after'?'<span class="tg c">หลังเวท</span>':'')+(t&&t.opt?'<span class="tg">ถ้าฟื้นตัวดี</span>':'')+'</div>'+
+  '<div class="exnote">'+note+'</div>'+(warn?'<div class="z2wn">⚠️ '+warn+'</div>':'')+
+  '<div class="seg z2m">'+Object.keys(Z2M).map(k=>'<button type="button" data-m="'+k+'" class="'+(r.mode===k?'on':'')+'">'+Z2M[k]+'</button>').join('')+'</div>'+
+  '<div class="g2 z2g">'+[['min','⏱️ เวลา (นาที)','decimal'],['km','📍 ระยะ (กม.)','decimal'],['hr','❤️ HR เฉลี่ย','numeric'],['cad','👣 Cadence (spm)','numeric']].map(f=>
+   '<div class="z2f" data-f="'+f[0]+'"><div class="flab">'+f[1]+'</div><input class="numin" data-z="'+f[0]+'" type="number" inputmode="'+f[2]+'" placeholder="'+(last&&num(last[f[0]])?num(last[f[0]]):'–')+'" value="'+(num(r[f[0]])?num(r[f[0]]):'')+'" aria-label="'+f[1]+'"></div>').join('')+'</div>'+
+  '<div class="z2o"></div>'+
+  (last?'<div class="last">ครั้งก่อน '+thaiDate(last.date)+'&nbsp; <b>'+z2Sum(last)+'</b></div>':'')+
+  (ph?'<div class="vbar z2bar"><i></i></div>':'');
+ box.appendChild(c);
+ const out=c.querySelector('.z2o'),wm=c.querySelector('.z2wm'),bar=c.querySelector('.z2bar i');
+ const read=()=>{const o={mode:r.mode};c.querySelectorAll('[data-z]').forEach(i=>{if(i.value!=='')o[i.dataset.z]=i.value});return o};
+ const paint=o=>{out.innerHTML=z2Verdict(o,zz);const tot=base+num(o.min);wm.textContent=Math.round(tot);
+  if(bar){bar.style.width=Math.min(100,tot/ph.tot*100)+'%';bar.style.background=tot>=ph.tot?'var(--ok)':'linear-gradient(90deg,#c0002f,#ff2d55,#ff5c8a)'}
+  c.querySelector('[data-f="cad"]').style.display=o.mode==='run'?'':'none'};
+ const save=async()=>{const o=read();paint(o);
+  if(num(o.min)>0||num(o.km)>0||num(o.hr)>0){await S('z2:'+curDate,o);
+   if(num(o.min)>0&&!DID[curDate]){DID[curDate]=1;await S('did',DID);drawStreak();strip()}}
+  else await DEL('z2:'+curDate)};
+ c.querySelectorAll('[data-z]').forEach(i=>i.oninput=save);
+ c.querySelectorAll('.z2m button').forEach(b=>b.onclick=()=>{r.mode=b.dataset.m;buzz();
+  c.querySelectorAll('.z2m button').forEach(x=>x.classList.toggle('on',x===b));save()});
+ paint(read())}
+/* stats: weekly minutes vs plan, pace at in-zone HR */
+async function z2Stats(a){const all=await z2All(),z=z2C();if(!all.length&&!z.on)return;
+ const lo=num(z.lo)||140,hi=num(z.hi)||150,w0=weekOf(curDate)[0];let rows='';
+ for(let i=5;i>=0;i--){const ws=weekOf(addD(w0,-7*i)),m=z2Min(all,ws),ph=z2Ph(ws[0]),tg=ph?ph.tot:0;
+  if(!m&&!tg)continue;const p=Math.min(100,m/Math.max(tg,100)*100),ok=tg&&m>=tg;
+  rows+='<div class="vrow"><span class="vn">'+thaiDate(ws[0])+(i===0?' •':'')+'</span><div class="vbar"><i style="width:'+p+'%;background:'+(ok?'var(--ok)':(m?'linear-gradient(90deg,#c0002f,#ff2d55,#ff5c8a)':'transparent'))+'"></i></div><span class="vnum" style="color:'+(ok?'var(--ok)':(m?'var(--c1)':'var(--fnt)'))+'">'+m+(tg?'<small>/'+tg+'</small>':'')+'</span></div>'}
+ const runs=all.filter(x=>x.mode==='run'&&num(x.km)>0&&num(x.hr)>=lo-3&&num(x.hr)<=hi+3).map(x=>({d:x.date,ps:num(x.min)*60/num(x.km)}));
+ const el=document.createElement('div');el.className='sect';
+ el.innerHTML='<h3>🏃 Zone 2 <span class="z2w">นาทีต่อสัปดาห์</span></h3>'+(rows||'<div class="nod">ยังไม่มีบันทึก</div>')+
+  (z.on&&z.start?'<div class="hint">แผนเริ่ม '+thaiDate(z.start)+' เป้า 50 → 65 → 90–100 นาที เพิ่มไม่เกินราว 10% ต่อสัปดาห์</div>':'')+
+  '<div style="height:1px;background:var(--ln);margin:14px 0"></div><div class="z2pc"></div>';
+ a.appendChild(el);
+ const pc=el.querySelector('.z2pc');
+ if(runs.length>=2){spark(pc,runs.map(x=>-Math.round(x.ps)),'เพซตอน HR อยู่ในโซน '+lo+'–'+hi+', '+runs.length+' ครั้ง','');
+  const f=runs[0].ps,l=runs[runs.length-1].ps,df=Math.round(f-l);
+  pc.querySelector('.cst').innerHTML='<div><span>เริ่ม</span><b>'+pace(f)+'</b></div><div><span>ล่าสุด</span><b>'+pace(l)+'</b></div>'+
+   '<div><span>เปลี่ยนแปลง</span><b style="color:'+(df>=0?'var(--ok)':'var(--bad)')+'">'+(df>=0?'เร็วขึ้น ':'ช้าลง ')+Math.abs(df)+' วิ/กม.</b></div>';
+  pc.insertAdjacentHTML('beforeend','<div class="hint">HR เท่าเดิมแต่เพซเร็วขึ้น แปลว่าฐานแอโรบิกดีขึ้น เส้นยิ่งสูงยิ่งเร็ว</div>')}
+ else pc.innerHTML='<div class="hint" style="margin-top:0">บันทึกวิ่งที่มีระยะและ HR อยู่ในโซนอย่างน้อย 2 ครั้ง แล้วจะเห็นกราฟเพซ</div>'}
+/* settings */
+async function z2Set(a){const z=z2C();
+ const s=document.createElement('div');s.className='sect';
+ s.innerHTML='<h3>🏃 Zone 2</h3>'+
+  '<div class="srow2"><div><div class="l">แผนเพิ่มฐานแอโรบิก</div><div class="s">พุธ + พฤหัสหลังเวท, สัปดาห์ 5 เพิ่มอาทิตย์</div></div><button class="tog'+(z.on?' on':'')+'" id="z2t" aria-label="แผน Zone 2"><i></i></button></div>'+
+  '<div class="srow2"><div><div class="l">📅 เริ่มสัปดาห์ที่ 1</div><div class="s">นับจากวันอาทิตย์ของสัปดาห์นั้น</div></div><input type="date" class="dpick" id="z2s" value="'+(z.start||'')+'" aria-label="วันเริ่มแผน Zone 2"></div>'+
+  '<div class="srow2"><div><div class="l">❤️ HR ต่ำสุดของโซน</div><div class="s">ดู Zone 2 ใน Apple Watch</div></div><input class="numin" id="z2l" type="number" inputmode="numeric" value="'+(z.lo||140)+'"></div>'+
+  '<div class="srow2"><div><div class="l">❤️ HR สูงสุดของโซน</div><div class="s">เกินนี้ให้สลับเดิน</div></div><input class="numin" id="z2h" type="number" inputmode="numeric" value="'+(z.hi||150)+'"></div>';
+ a.appendChild(s);
+ const up=async()=>{CFG.z2=Object.assign(z2Def(),CFG.z2||{});await S('cfg',CFG)};
+ document.getElementById('z2t').onclick=async e=>{await up();CFG.z2.on=!z.on;z.on=CFG.z2.on;e.currentTarget.classList.toggle('on',z.on);await SV('cfg',CFG)};
+ document.getElementById('z2s').onchange=async e=>{if(!e.target.value)return;await up();CFG.z2.start=e.target.value;await SV('cfg',CFG)};
+ document.getElementById('z2l').oninput=async e=>{await up();CFG.z2.lo=+e.target.value||140;S('cfg',CFG)};
+ document.getElementById('z2h').oninput=async e=>{await up();CFG.z2.hi=+e.target.value||150;S('cfg',CFG)}}
+
 /* ========= TRAIN ========= */
 async function vToday(a){
  const d=dayOf(curDate),ac=d?d.color:'#ff2d55';
  document.body.style.setProperty('--acc',ac);
  const hero=document.createElement('div');hero.className='hero poster'+(d?'':' rest');hero.style.setProperty('--dc',ac);
- const nS=d?d.ex.reduce((s,e)=>s+setsOf(e),0):0,LI=loadInfo(),RR=RDY[curDate]||{};
+ const nS=d?d.ex.reduce((s,e)=>s+setsOf(e),0):0,LI=loadInfo(),RR=RDY[curDate]||{},ZT=z2Tgt(curDate);
  const lvH=(RR.ill!==undefined||RQ.slice(0,3).every(q=>RR[q.k]!==undefined)||LI.f<1)?'<span class="lvb '+LI.lv+'">'+LVL[LI.lv][0]+' '+LVL[LI.lv][1]+(LI.f>0&&LI.f<1?' '+Math.round(LI.f*100)+'%':'')+'</span>':'';
  hero.innerHTML='<div class="art" aria-hidden="true"></div><div class="in"><div class="kick">'+thaiDate(curDate,1)+'</div><h2>'+(d?esc(d.name):'วันพัก')+'</h2>'+
-  '<div class="sub">'+(d&&LI.f===0&&!RR.force?'🤒 พักให้หายก่อน แผนวันนี้เลื่อนไปได้':d?d.emoji+' '+d.ex.length+' ท่า, '+nS+' เซ็ต, ราว '+estMin(d)+' นาที'+(isDl()?'<br>🧘 deload ถึง '+thaiDate(CFG.dlUntil):''):'😴 กล้ามโตตอนพัก นอนให้พอ กินโปรตีนให้ถึง')+'</div>'+
+  '<div class="sub">'+(d&&LI.f===0&&!RR.force?'🤒 พักให้หายก่อน แผนวันนี้เลื่อนไปได้':d?d.emoji+' '+d.ex.length+' ท่า, '+nS+' เซ็ต, ราว '+estMin(d)+' นาที'+(ZT&&!ZT.pre?'<br>🏃 Zone 2 '+z2Rng(ZT)+' นาที'+(ZT.role==='after'?' หลังเวท':''):'')+(isDl()?'<br>🧘 deload ถึง '+thaiDate(CFG.dlUntil):''):'😴 กล้ามโตตอนพัก นอนให้พอ กินโปรตีนให้ถึง')+'</div>'+
   '<div class="hrow"><button class="swapb" id="swb">🔄 สลับวัน</button>'+lvH+'</div>'+(d?'<div class="hstats" id="hs"></div>':'')+'</div>'+
   (d?'<div class="ring" id="ring"></div>'+ecgSvg():'');
  a.appendChild(hero);document.getElementById('swb').onclick=swapDay;
@@ -990,12 +1121,14 @@ async function vToday(a){
   await nutri(a);await dayNote(a);return}
  if(!d){const r=document.createElement('div');r.className='restc';
   r.innerHTML='<span class="i">😴</span><h3>วันพักฟื้น</h3><p>ยืดเหยียด เดินเบา ๆ หรือคาร์ดิโอโซน 2 ได้<br>นอน 7 ชั่วโมงขึ้นไป และกินโปรตีนให้ถึงเป้า</p>';
-  a.appendChild(r);await nutri(a);await dayNote(a);return}
+  a.appendChild(r);await z2Slot(a);await nutri(a);await dayNote(a);return}
  if(!d.ex.length){const e=document.createElement('div');e.className='empt';
   e.innerHTML='<span class="i">📭</span>ยังไม่มีท่าในวันนี้<br>ไปที่แท็บ <b>โปรแกรม</b> เพื่อเพิ่มท่า';a.appendChild(e);return}
+ if(ZT&&ZT.role==='main')await z2Slot(a);
  let done=0,sets=0,vol=0,tot=0;
  for(const ex of d.ex){const r=await card(ex,a,ac);if(r.full)done++;sets+=r.sets;vol+=r.vol;tot+=r.work}
  hsSet(sets,vol,done,d.ex.length);
+ if(!ZT||ZT.role!=='main')await z2Slot(a);
  requestAnimationFrame(()=>drawRing(tot?Math.min(100,Math.round(sets/tot*100)):0,ac));
  const f=document.createElement('button');f.className='big';f.style.marginBottom='12px';f.textContent='✅ จบการฝึกและสำรองข้อมูล';
  f.onclick=()=>finish(d);a.appendChild(f);
@@ -1265,10 +1398,11 @@ async function finish(d){
    rowsOf(s,0,'').forEach(r=>{if(r.done&&!r.warm){const rp=num(r.r);if(rp>0){sets++;if(kg)vol+=num(r.w)*rp;any=1}}});
    if(any)cnt++}}
  const prs=Object.keys(await G('prs')||{}).filter(k=>k.endsWith(':'+curDate)).length;
- const nw=await checkAch();
- if(sets)confetti(36);
+ const nw=await checkAch(),zz=await G('z2:'+curDate);
+ if(sets||(zz&&num(zz.min)>0))confetti(36);
  showM('<h3>✅ จบการฝึก</h3>'+(sets?'<div class="fin"><div><b>'+cnt+'</b><span>ท่า</span></div><div><b>'+sets+'</b><span>เซ็ต</span></div><div><b>'+Math.round(vol).toLocaleString()+'</b><span>โวลุ่ม kg</span></div><div><b>'+prs+'</b><span>สถิติใหม่</span></div></div>'+
   '<div class="fsub">'+d.emoji+' '+esc(d.name)+', '+thaiDate(curDate,1)+'</div>':'<div class="fsub">ยังไม่มีเซ็ตที่ติ๊กเสร็จ</div>')+
+  (zz&&num(zz.min)>0?'<div class="fsub">Zone 2: '+z2Sum(zz)+'</div>':'')+
   (nw.length?'<div class="achnew">🎖️ ปลดล็อก '+nw.map(x=>x.i+' '+x.t).join(', ')+'</div>':'')+
   '<div class="fsub">สำรองข้อมูลกันหาย เลือก Save to Files หรือ iCloud Drive</div>'+
   '<button class="big" id="fb">💾 สำรองข้อมูล</button><button class="big g" style="margin-top:8px" id="fs">ไว้ทีหลัง</button>');
@@ -1457,6 +1591,7 @@ async function vStats(a){
  miniHero(a,'สถิติ','ภาพรวมตั้งแต่เริ่มบันทึก',
   '<div><b>'+s.days+'</b><span>วันที่ฝึก</span></div><div><b>'+s.sets+'</b><span>เซ็ต</span></div><div><b>'+(s.vol>=1000?(Math.round(s.vol/100)/10)+'k':s.vol)+'</b><span>โวลุ่ม kg</span></div><div><b>'+s.prs+'</b><span>สถิติใหม่</span></div>');
  await weekReport(a,s.ss);
+ await z2Stats(a);
  await liftStatus(a);
  const c=document.createElement('div');c.className='sect';c.innerHTML='<h3>📅 ปฏิทินการฝึก</h3><div id="ch"></div>';a.appendChild(c);cal();
  const v=document.createElement('div');v.className='sect';
@@ -1504,10 +1639,10 @@ async function weekReport(a,ss){
   ss.forEach(s=>{if(!set.has(s.date))return;const x=sessAgg(s);sets+=x.sets;vol+=x.vol;
    const ex=exByEid(s.eid);if(ex&&x.sets)(ex.mus||[]).forEach((m,i)=>{mus[m]=(mus[m]||0)+x.sets*(i?.5:1)})});
   return{sets,vol:Math.round(vol),mus,done:dates.filter(d=>DID[d]).length,plan:dates.filter(d=>dayOf(d)).length,pr:pk.filter(d=>set.has(d)).length}};
- const cw=wk.filter(d=>d<=td),A=agg(cw.length?cw:wk),B=agg(pw);
+ const cw=wk.filter(d=>d<=td),A=agg(cw.length?cw:wk),B=agg(pw),ZA=await z2All();
  const row=(l,x,y)=>'<div>'+l+'</div><div class="v">'+x+'</div><div class="v">'+y+'</div>';
  let h='<h3>📋 รายงานสัปดาห์</h3><div class="wr"><div class="hd">'+thaiDate(wk[0])+' – '+thaiDate(wk[6])+'</div><div class="v hd">สัปดาห์นี้</div><div class="v hd">สัปดาห์ก่อน</div>'+
-  row('วันที่ฝึก',A.done+'/'+A.plan,B.done+'/'+B.plan)+row('เซ็ต',A.sets,B.sets)+row('โวลุ่ม kg',A.vol.toLocaleString(),B.vol.toLocaleString())+row('สถิติใหม่',A.pr,B.pr)+'</div>';
+  row('วันที่ฝึก',A.done+'/'+A.plan,B.done+'/'+B.plan)+row('เซ็ต',A.sets,B.sets)+row('โวลุ่ม kg',A.vol.toLocaleString(),B.vol.toLocaleString())+row('สถิติใหม่',A.pr,B.pr)+row('Zone 2 นาที',z2Min(ZA,cw.length?cw:wk),z2Min(ZA,pw))+'</div>';
  let ref=null,refW=null;
  for(let i=1;i<=8&&!ref;i++){const ws=weekOf(addD(wk[0],-7*i)),g=agg(ws);if(g.sets>0){ref=g;refW=ws}}
  if(ref){const plan=planVol();
@@ -1565,9 +1700,9 @@ async function daySum(ds){
  const el=document.getElementById('cs');if(!el)return;
  const ss=(await allSess()).filter(s=>s.date===ds);let sets=0,vol=0;const nm=[];
  ss.forEach(s=>{const x=sessAgg(s);if(!x.sets)return;sets+=x.sets;vol+=x.vol;const ex=exByEid(s.eid);if(ex)nm.push(optOf(ex,+(s.eid.split('#')[1]||0)).name)});
- const dd=dayOf(ds);el.className='csum show';
+ const dd=dayOf(ds),zz=await G('z2:'+ds),zl=zz&&num(zz.min)>0?'<div class="cnm">'+z2Sum(zz)+'</div>':'';el.className='csum show';
  el.innerHTML='<b>'+DOWF[pd(ds).getDay()]+' '+thaiDate(ds)+'</b>, '+(dd?dd.emoji+' '+esc(dd.name):'วันพัก')+'<br>'+
-  (sets?'เซ็ต <b>'+sets+'</b>, โวลุ่ม <b>'+Math.round(vol).toLocaleString()+' kg</b><div class="cnm">'+nm.map(esc).join(', ')+'</div>':'ไม่มีบันทึก')}
+  ((sets?'เซ็ต <b>'+sets+'</b>, โวลุ่ม <b>'+Math.round(vol).toLocaleString()+' kg</b><div class="cnm">'+nm.map(esc).join(', ')+'</div>':'')+zl||'ไม่มีบันทึก')}
 
 function vol(ss){
  const set=new Set(weekOf(curDate)),t={},plan=planVol();MK.forEach(k=>t[k]=0);
@@ -1616,6 +1751,7 @@ async function vSet(a){
  document.getElementById('n2').oninput=e=>{CFG.restI=+e.target.value||90;S('cfg',CFG)};
  document.getElementById('n3').oninput=e=>{CFG.ptarget=+e.target.value||0;S('cfg',CFG);document.getElementById('pts').textContent=ptHint(CFG.ptarget,lbw)};
  document.getElementById('n4').oninput=e=>{CFG.bar=+e.target.value||20;S('cfg',CFG)};
+ await z2Set(a);
  await coachSettings(a);
 
  const prev=await G('days_prev');
@@ -1672,7 +1808,7 @@ async function applyUpgrade(){
  for(const [f,t] of V5_MIG){for(const k of all.filter(x=>x.startsWith('s:'+f+':'))){const nk='s:'+t+':'+k.split(':')[2];
   if(all.includes(nk))continue;const v=await ST.get(k);if(!v)continue;await ST.set(nk,v.value);await DEL(k);all.push(nk);prev.moved.push([k,nk])}}
  await S('days_prev',prev);
- DAYS=nd;CFG.weekMap=CFG.weekMap||{};CFG.weekMap[3]='d4';PROGV=V_LATEST;for(const f of ['p57','p58','p59','p60','p61','p62'])await S(f,1);
+ DAYS=nd;CFG.weekMap=CFG.weekMap||{};CFG.weekMap[3]='d4';PROGV=V_LATEST;if(!CFG.z2)CFG.z2=z2Def();for(const f of ['p57','p58','p59','p60','p61','p62','p63'])await S(f,1);
  await S('days',DAYS);await S('cfg',CFG);await S('progv',PROGV);await DEL('upsnooze');
  hideM();toast('อัปเกรดเป็น v'+V_LATEST+' แล้ว','p');confetti(40);render()}
 async function rollbackUpgrade(){
@@ -1902,6 +2038,7 @@ async function coachCtx(){const ds=curDate,d=dayOf(ds),LI=loadInfo(ds),R=RDY[ds]
     (sg?' | แอปแนะนำ '+(sg.w!=null?fmtW(sg.w,u)+' ':'')+sg.msg:'')+
     (last?' | ครั้งก่อน '+thaiDate(last.date)+' '+(last.w>0?fmtW(last.w,u)+' × ':'')+last.reps.join('/'):' | ยังไม่เคยเล่น')+
     ' | วันนี้ '+(dn.length?cSets(dn,u):'ยังไม่เริ่ม'))}}
+ const zt=z2Tgt(ds),zl=await G('z2:'+ds);if(zt||zl)L2.push('Zone 2 วันนี้: '+(zt?(zt.pre?'ยังไม่เริ่มแผน เดินเร็ว ':'เป้า ')+z2Rng(zt)+' นาที'+(zt.role==='after'?' หลังเวท':''):'นอกตาราง')+(zl&&num(zl.min)>0?' | บันทึกแล้ว '+z2Sum(zl):''));
  let w7=0;for(let k=0;k<7;k++)if(DID[addD(today(),-k)])w7++;
  L2.push('ฝึก '+w7+' วันใน 7 วันล่าสุด ต่อเนื่อง '+streakCount()+' วัน');
  const nu=await G('nu:'+today())||{};L2.push('โปรตีนวันนี้ '+(num(nu.p)||0)+'/'+(CFG.ptarget||120)+' g');
@@ -2047,9 +2184,9 @@ function welcome(){if(document.getElementById('mbg').classList.contains('show'))
 async function boot(){
  CFG=await G('cfg');DAYS=await G('days');PROGV=+(await G('progv'))||0;
  if(!CFG||!DAYS||!DAYS.length){const fresh=!DAYS||!DAYS.length;CFG=Object.assign(seedCfg(),CFG||{});
-  if(fresh){FRESH=1;DAYS=seedDays();PROGV=V_LATEST;await S('progv',PROGV);for(const f of ['p57','p58','p59','p60','p61','p62'])await S(f,1)}
+  if(fresh){FRESH=1;DAYS=seedDays();PROGV=V_LATEST;CFG.z2=z2Def();await S('progv',PROGV);for(const f of ['p57','p58','p59','p60','p61','p62','p63'])await S(f,1)}
   await S('cfg',CFG);await S('days',DAYS)}
- OVR=await G('ovr')||{};DID=await G('did')||{};RDY=await G('rdy')||{};await patchCore();await patchLegs();await patchWed();await patchLean();await patchV7();await patchColors()}
+ OVR=await G('ovr')||{};DID=await G('did')||{};RDY=await G('rdy')||{};await patchCore();await patchLegs();await patchWed();await patchLean();await patchV7();await patchZ2();await patchColors()}
 (async function(){
  setTimeout(hideSplash,4000);
  try{
